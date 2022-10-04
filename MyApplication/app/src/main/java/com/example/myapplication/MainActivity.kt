@@ -7,6 +7,9 @@ import android.widget.EditText
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
+    lateinit var etName:EditText
+    lateinit var btOk:Button
+    lateinit var tvName:TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
