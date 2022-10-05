@@ -10,17 +10,21 @@ class MainActivity : AppCompatActivity() {
     lateinit var etName:EditText
     lateinit var btOk:Button
     lateinit var tvName:TextView
+    lateinit var btclear:TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         // 把介面布局檔的元件抓到程式裏頭的物件
-        val etName = findViewById<EditText>(R.id.etName)
-        val btOk = findViewById<Button>(R.id.btOk)
-        val tvName = findViewById<TextView>(R.id.tvName)
-
+         etName = findViewById(R.id.etName)
+         btOk = findViewById(R.id.btOk)
+         tvName = findViewById(R.id.tvName)
+         btclear= findViewById(R.id.btClear)
         btOk.setOnClickListener {
             tvName.text = etName.text
+        }
+        btclear.setOnClickListener {
+            tvName.text = ""
         }
     }
 }
